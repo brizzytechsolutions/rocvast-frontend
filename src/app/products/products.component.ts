@@ -13,11 +13,11 @@ import { Product } from './interfaces/product.interface';
 })
 export class ProductsComponent {
   @Input() products: Product[] = [];
-  @Output() selectProd = new EventEmitter();
+  @Output() selectProd = new EventEmitter<number>();
 
   heading = 'Products Grid';
 
-  selectProduct(product: Product) {
-    this.selectProd.emit(product);
+  selectProduct(productId: number) {
+    this.selectProd.emit(productId);
   }
 }

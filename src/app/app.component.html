@@ -1,14 +1,5 @@
-<button (click)="toggleView()" [disabled]="showList">List</button>
-<button (click)="toggleView()" [disabled]="!showList">Grid</button>
 
-<app-product-list
-  [products]="myProducts"
-  (selectProd)="logProduct($event)"
-  *ngIf="showList"
-></app-product-list>
+<button routerLink="/products/list" [disabled]="showList">List</button>
+<button routerLink="/products/grid" [disabled]="!showList">Grid</button>
 
-<app-product-grid
-  [products]="myProducts"
-  (selectProd)="logProduct($event)"
-  *ngIf="!showList"
-></app-product-grid>
+<router-outlet></router-outlet>

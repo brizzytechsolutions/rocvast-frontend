@@ -1,0 +1,14 @@
+<div *ngIf="product">
+    <h2>{{ product.title }}</h2>
+    <img [src]="product.image" alt="{{ product.title }}">
+    <p>Price: {{ product.price | currency }}</p>
+    <p>Short Description: {{ product.shortDesc }}</p>
+    <p>Quantity: {{ product.quantity }}</p>
+    <p>Category: {{ product.category }}</p>
+    <button (click)="goBack()">Back to Products</button>
+  </div>
+  
+  <div *ngIf="error">
+    <p>{{ error }}</p>
+  </div>
+  

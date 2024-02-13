@@ -1,8 +1,10 @@
 <h2>{{ heading }}</h2>
 
+<button (click)="addProduct()">Add Product</button>
+
 <ul class="collection">
   <li *ngFor="let e of products">
-    <button (click)="selectProduct(e)">Select</button>
+    <button (click)="selectProduct(e.id)">Select</button>
     {{ e.title }} R {{ e.price }}
   </li>
 </ul>

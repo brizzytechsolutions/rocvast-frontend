@@ -1,8 +1,23 @@
-<h2>{{ heading }}</h2>
+<!-- <h2>{{ heading }}</h2>
 
 <div class="products">
   <article *ngFor="let e of products">
     <header>{{ e.title }} R{{ e.price }}</header>
     <button (click)="selectProduct(e)">Select</button>
   </article>
+</div> -->
+
+
+<!-- product-grid.component.html -->
+<h2>{{ heading }}</h2>
+
+<div class="products">
+  <article *ngFor="let e of products">
+    <header>{{ e.title }} R{{ e.price }}</header>
+    <!-- Corrected to pass product ID -->
+    <button (click)="selectProduct(e.id)">Select</button>
+  </article>
 </div>
+
+
+
