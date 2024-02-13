@@ -7,8 +7,11 @@ import { Product } from '../products/interfaces/product.interface';
   providedIn: 'root'
 })
 export class ProductService {
-  // private apiUrl = 'http://localhost:3000/product/';
-private apiUrl = 'https://localhost:7162/api/Product/';
+  // nestjs backend url
+  private apiUrl = 'http://localhost:3000/product/';
+
+  // asp.net backend url
+// private apiUrl = 'https://localhost:7162/api/Product/';
 
   constructor(private http: HttpClient) {}
 
